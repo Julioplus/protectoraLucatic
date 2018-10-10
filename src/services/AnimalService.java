@@ -8,9 +8,15 @@ import domain.Animal;
 public class AnimalService implements IAnimalService {
 	
 	private IAnimalDAO AnimalDAO = new AnimalDAO();
+
+	@Override
+	public List<Animal> getAnimales(String categoria) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
-    public List<Animal> getAnimales(String categoria) {
-       return AnimalDAO.getAnimales(categoria);
-    }
+//    public List<Animal> getAnimales(String categoria) {
+//       return AnimalDAO.getAnimales(categoria);
+//    }
 
 }
