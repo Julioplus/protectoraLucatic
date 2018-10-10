@@ -1,41 +1,56 @@
 package dao;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
+import java.util.Iterator; //Usado no activado
 import java.util.List;
 import java.util.Map;
-import domain.*;
+import domain.*; //Usado no implimentado
 
 import domain.Animal;
 
 public class AnimalDAO implements IAnimalDAO{
+	
+	private Map<Integer, Animal> stock;
+	private ConexionDB conector = new ConexionDB();
+	
+	public AnimalDAO() {
+		stock = new HashMap<>();
+	}
+	
+	public Map<Integer, Animal> getStock() {
+		return stock;
+	}
+	
+	public void setStock(Map<Integer, Animal> stock){
+		this.stock = stock;
+	}
 
-		public ArrayList<Animal> mostrarAnimales(String nombre) {
-			
-			
-			return null;
-		}
+	public ArrayList<Animal> mostrarAnimales(String nombre) {
 		
-		public boolean anadirAnimal(Animal nuevo) {
-			String query = "INSERT INTO animales (id_animal, nombre, fecha_entrada, fecha_salida, descripcion, cabecera, estado)"
-					+ "  VALUES('"+nuevo.getId()+"', '"+nuevo.getNombre()+"', '"+nuevo.getFechaEntrada()+"', null, '"
-					+nuevo.getDescripcion().getCuerpo()+"', '"+nuevo.getDescripcion().getCabecera()+"', '"+nuevo.getEstado()+"')";
-			return ConexionBBDD.anadir(query);
-		}
 		
-		public boolean editarAnimal(Animal nuevo) {
-			String query = "UPDATE animales SET nombre = '"+nuevo.getNombre()+"', fecha_entrada = '"+nuevo.getFechaEntrada()+
-					"', fecha_salida = '"+nuevo.getFechaSalida()+"', descripcion = '"+nuevo.getDescripcion().getCuerpo()+
-					"', cabecera = '"+nuevo.getDescripcion().getCabecera()+"', estado = '"+nuevo.getEstado()+
-					"' WHERE id_animal = '"+nuevo.getId()+"'";
-			return ConexionBBDD.modificar(query);
-		}
-		
-		public boolean eliminarAnimal(Animal nuevo) {
-			String query = "DELETE FROM animales WHERE '"+nuevo.getId()+"'";
-			return ConexionBBDD.borrar(query);
-		}
+		return null;
+	}
+	
+	public boolean anadirAnimal(Animal nuevo) throws ClassNotFoundException, SQLException {
+		String query = "INSERT INTO animales (id_animal, nombre, fecha_entrada, fecha_salida, descripcion, cabecera, estado)"
+				+ "  VALUES('"+nuevo.getId()+"', '"+nuevo.getNombre()+"', '"+nuevo.getFechaEntrada()+"', null, '"
+				+nuevo.getDescripcion().getCuerpo()+"', '"+nuevo.getDescripcion().getCabecera()+"', '"+nuevo.getEstado()+"')";
+		return conector.anadir(query);
+	}
+	
+	public boolean editarAnimal(Animal nuevo) throws ClassNotFoundException, SQLException {
+		String query = "UPDATE animales SET nombre = '"+nuevo.getNombre()+"', fecha_entrada = '"+nuevo.getFechaEntrada()+
+				"', fecha_salida = '"+nuevo.getFechaSalida()+"', descripcion = '"+nuevo.getDescripcion().getCuerpo()+
+				"', cabecera = '"+nuevo.getDescripcion().getCabecera()+"', estado = '"+nuevo.getEstado()+
+				"' WHERE id_animal = '"+nuevo.getId()+"'";
+		return conector.modificar(query);
+	}
+	
+	public boolean eliminarAnimal(Animal nuevo) throws ClassNotFoundException, SQLException {
+		String query = "DELETE FROM animales WHERE '"+nuevo.getId()+"'";
+		return conector.borrar(query);
 	}	
 	
 	
@@ -53,61 +68,28 @@ public class AnimalDAO implements IAnimalDAO{
 //		return (animales);
 //		
 //	}
-	
-	private Map<Integer, Animal> animalStock;
-	
-	public AnimalDAO(){
-		animalStock = new HashMap<>();
-	}
-	
-	public Map<Integer, Animal> getAnimalStock(){
-		return animalStock;
-	}
-	
-	public void setStock(Map<Integer, Animal> animalStock){
-		this.animalStock = animalStock;
-		
-	}
-	
 
+	/* Revisar
 	@Override
-	public boolean anadirAnimal() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	
-	@Override
-	public boolean anadirAnimal(int cod, Animal animal) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	
-
-	@Override
-	public boolean eliminarAnimal() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public void listarAnimal() {
+	public boolean listarAnimales() {
 		Integer id;
-		Iterator<Integer> animales = animalStock.keySet().iterator();
+		Iterator<Integer> animales = animalDAO.keySet().iterator();
 		System.out.println("Listando animales...");
 		while(((Iterator<Integer>) animalStock).hasNext()){
 			id = animales.next();
 			System.out.println("[" + id + "]: " + animalStock.get(id));
 		}
-		
-	}
+	}*/
 
-	@Override
 	public List<Animal> getAnimales(String nombre) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-
+	@Override // Este método hay que matarlo después
+	public boolean listarAnimales() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
 }

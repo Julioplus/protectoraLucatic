@@ -15,10 +15,11 @@ public class Animal {
 		
 	}
 	
-	public Animal(String nombre, Descripcion descripcion, Time fechaEntrada){
+	public Animal(String nombre, Descripcion descripcion, Time fechaEntrada, Categoria estado){
 		this.nombre=nombre;
 		this.descripcion=descripcion;
 		this.fechaEntrada=fechaEntrada;
+		this.estado = estado;
 	}
 	
 	public Animal(int id, String nombre, Descripcion descripcion, Time fechaEntrada, Time fechaSalida, Categoria estado){
