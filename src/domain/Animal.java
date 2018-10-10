@@ -1,36 +1,33 @@
 package domain;
 
+import java.sql.Time;
+
 public class Animal {
 	
 	private int id;
 	private String nombre;
-	private String descripcion;
-	private Categoria categoria;
+	private Descripcion descripcion;	
+	private Time fechaEntrada;
+	private Time fechaSalida;
+	private Categoria estado;
 	
-	public Animal(){}
-	
-	public Animal(String nombre){
-		this.nombre = nombre;
+	public Animal(){
+		
 	}
 	
-	public Animal(String nombre, Categoria categoria){
-		this.nombre = nombre;
-		this.categoria = categoria;
+	public Animal(String nombre, Descripcion descripcion, Time fechaEntrada){
+		this.nombre=nombre;
+		this.descripcion=descripcion;
+		this.fechaEntrada=fechaEntrada;
 	}
 	
-	public Animal(int id, String nombre, Categoria categoria, String descripcion){
+	public Animal(int id, String nombre, Descripcion descripcion, Time fechaEntrada, Time fechaSalida, Categoria estado){
 		this.id = id;
-		this.nombre = nombre;
-		this.descripcion = descripcion;
-		this.categoria = categoria;	
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
+		this.nombre=nombre;
+		this.descripcion=descripcion;
+		this.fechaEntrada=fechaEntrada;
+		this.fechaSalida=fechaSalida;
+		this.estado = estado;
 	}
 
 	public String getNombre() {
@@ -41,27 +38,55 @@ public class Animal {
 		this.nombre = nombre;
 	}
 
-	public String getDescripcion() {
+	public Descripcion getDescripcion() {
 		return descripcion;
 	}
 
-	public void setDescripcion(String descripcion) {
+	public void setDescripcion(Descripcion descripcion) {
 		this.descripcion = descripcion;
 	}
 
-	public Categoria getCategoria() {
-		return categoria;
+	public Time getFechaEntrada() {
+		return fechaEntrada;
 	}
 
-	public void setCategoria(Categoria categoria) {
-		this.categoria = categoria;
+	public void setFechaEntrada(Time fechaEntrada) {
+		this.fechaEntrada = fechaEntrada;
+	}
+
+	public Time getFechaSalida() {
+		return fechaSalida;
+	}
+
+	public void setFechaSalida(Time fechaSalida) {
+		this.fechaSalida = fechaSalida;
+	}
+
+	public Categoria getEstado() {
+		return estado;
+	}
+
+	public void setEstado(Categoria estado) {
+		this.estado = estado;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	@Override
 	public String toString() {
-		return "Animal [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", categoria=" + categoria
-				+ "]";
+		return "Animal [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", fechaEntrada="
+				+ fechaEntrada + ", fechaSalida=" + fechaSalida + ", estado=" + estado + "]";
 	}
+	
+	
 
-
+	
+	
+	
 }
