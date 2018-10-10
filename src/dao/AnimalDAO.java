@@ -22,4 +22,28 @@ public class AnimalDAO implements IAnimalDAO{
 		
 	}
 
+	@Override
+	public boolean anadirAnimal() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean anadirAnimal(Animal animal) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean eliminarAnimal() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void listarAnimal() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

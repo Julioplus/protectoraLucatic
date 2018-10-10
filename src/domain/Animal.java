@@ -5,7 +5,7 @@ public class Animal {
 	private int id;
 	private String nombre;
 	private String descripcion;
-	private String categoria;
+	private Categoria categoria;
 	
 	public Animal(){}
 	
@@ -13,24 +13,16 @@ public class Animal {
 		this.nombre = nombre;
 	}
 	
-	public Animal(String nombre, String categoria){
+	public Animal(String nombre, Categoria categoria){
 		this.nombre = nombre;
 		this.categoria = categoria;
 	}
 	
-	public Animal(int id, String nombre, String descripcion, String categoria){
+	public Animal(int id, String nombre, Categoria categoria, String descripcion){
 		this.id = id;
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 		this.categoria = categoria;	
-	}
-
-	public String getCategoria() {
-		return categoria;
-	}
-
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
 	}
 
 	public int getId() {
@@ -57,9 +49,19 @@ public class Animal {
 		this.descripcion = descripcion;
 	}
 
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+
 	@Override
 	public String toString() {
 		return "Animal [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", categoria=" + categoria
 				+ "]";
 	}
+
+
 }
