@@ -17,10 +17,11 @@
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
-
+	 <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Custom styles for this template -->
     <!--<link href="css/business-casual.min.css" rel="stylesheet">-->
-    <link rel="stylesheet" href="css/header.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" rel="stylesheet">
 
   </head>
 <body>
@@ -30,7 +31,10 @@
       <span class="site-heading-lower">Mad Lion´s</span>
 </h1>
 
-<%@include file="partials/header.jsp" %>
+<%@include file="./partials/header.jsp" %>
+
+
+Esta es la pagina principal
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec mauris in dui pellentesque eleifend. Donec nec ex ac libero vehicula aliquet. Vestibulum sit amet mi pellentesque, venenatis enim nec, egestas est. Etiam pellentesque elit libero, at volutpat tortor malesuada et. Maecenas nisl dui, faucibus at massa ut, viverra tincidunt erat. Pellentesque quis orci eu nibh vehicula pulvinar. Morbi posuere suscipit felis eu pretium. Nullam eu hendrerit dui. Nulla vehicula, nulla vitae commodo rhoncus, justo eros vulputate sem, non sagittis ex velit eget dolor.
 
@@ -43,7 +47,12 @@ Donec pharetra, lorem vel tincidunt vestibulum, magna nunc venenatis enim, vitae
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu egestas mauris. Morbi id sapien et nibh pulvinar hendrerit. Praesent a ligula a eros ullamcorper feugiat. Nam vestibulum cursus justo in consequat. Suspendisse non arcu sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc sed arcu eget nisl sagittis congue vitae ut augue. Nullam rutrum urna id placerat tristique. Aliquam aliquet eros nunc, non lobortis est maximus at. Suspendisse malesuada orci ullamcorper orci placerat interdum. Aenean a pulvinar dolor. Vestibulum aliquet dolor tellus, eget feugiat nisi dapibus eget. Aenean malesuada imperdiet pretium. Aenean faucibus at sapien id feugiat. Sed faucibus neque dolor, a elementum tortor imperdiet nec.
 
 
-<%@include file="partials/header.jsp" %>
+<%@include file="./partials/footer.jsp" %>
+
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 
 
