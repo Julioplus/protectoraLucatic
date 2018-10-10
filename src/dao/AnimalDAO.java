@@ -8,8 +8,6 @@ import java.util.List;
 import java.util.Map;
 import domain.*; //Usado no implimentado
 
-import domain.Animal;
-
 public class AnimalDAO implements IAnimalDAO{
 	
 	private Map<Integer, Animal> stock;
@@ -53,6 +51,18 @@ public class AnimalDAO implements IAnimalDAO{
 		return conector.borrar(query);
 	}	
 	
+	public void  veranimal(Animal nuevo)throws ClassNotFoundException, SQLException{
+		String query= "SELECT * FROM animales where ID_ANIMAL="+nuevo.getId();
+		java.sql.ResultSet resultadoquery = conector.mostraranimal(query);
+		while(resultadoquery.next()){
+			nuevo.setId(resultadoquery.getInt("ID_ANIMAL"));
+			nuevo.setNombre(resultadoquery.getString("NOMBRE"));
+			nuevo.setFechaEntrada(resultadoquery.getTime("FECHA_ENTRADA"));
+			nuevo.setEstado((Categoria.valueOf(resultadoquery.getString("ESTADO"))));
+			nuevo.setDescripcion(Descripcion);
+		}
+		
+	}
 	
 //	public List<Animal> getAnimales(String categoria){
 //		
