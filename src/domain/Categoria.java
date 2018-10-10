@@ -2,11 +2,11 @@ package domain;
 
 public enum Categoria {
 	
-	INVISIBLES("Invisibles"),
-	URGENTES("Urgentes"), 
-	RESERVADOS("Reservados"),
-	ADOPTADOS("Adoptados"),
-	DISPONIBLES("Disponibles");
+	RESERVADO("reservado"), 
+	ADOPTADO("adoptado"), 
+	INVISIBLE("invisible"),
+	URGENTE("urgente"), 
+	DISPONIBLE("disponible");
 	
 	private final String categoria;
 	
