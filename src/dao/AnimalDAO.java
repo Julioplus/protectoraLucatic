@@ -59,7 +59,7 @@ public class AnimalDAO implements IAnimalDAO{
 			nuevo.setNombre(resultadoquery.getString("NOMBRE"));
 			nuevo.setFechaEntrada(resultadoquery.getTime("FECHA_ENTRADA"));
 			nuevo.setEstado((Categoria.valueOf(resultadoquery.getString("ESTADO"))));
-			nuevo.setDescripcion(Descripcion);
+			//nuevo.setDescripcion((Descripcion.));
 		}
 		
 	}
