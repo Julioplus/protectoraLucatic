@@ -13,7 +13,7 @@ public class AnimalDAO implements IAnimalDAO{
 	
 	@Override // Listado
 	public ArrayList<Animal> listarAnimalesByCategoria(Categoria actual) throws ClassNotFoundException, SQLException {
-		ArrayList<Animal> busqueda = veranimal(conector.mostrar("SELECT * FROM animales WHERE estado = "+actual.toString()));
+		ArrayList<Animal> busqueda = veranimal(conector.mostrar("SELECT * FROM animales WHERE estado = '"+actual.toString()+"'"));
 		return busqueda;
 	}
 
