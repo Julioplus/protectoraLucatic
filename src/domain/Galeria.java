@@ -1,6 +1,6 @@
 package domain;
 
-import java.util.ArrayList;
+/*import java.util.ArrayList;
 
 public class Galeria {
 
@@ -32,4 +32,4 @@ public class Galeria {
 		this.direcciones.add(direccion);
 	}
 	
-}
+}*/

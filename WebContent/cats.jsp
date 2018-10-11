@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head>
 
@@ -37,19 +39,27 @@
                     
                         
                          <div class="col" id="CharFilter" >
+                         <a href= "AnimalesPresenter?categoria=DISPONIBLE">
            					 <button type="button" class="btn btn-outline-black waves-effect filter " name ="categoria">DISPONIBLE</button>
+           					 </a>
         				</div>
 
        					 <div class="col" id="CharFilter">
+       					 <a href= "AnimalesPresenter?categoria=URGENTE">
           					  <button type="button" class="btn btn-outline-black waves-effect filter " name ="categoria">URGENTE</button>
+          					  </a>
         				</div>
 
       					  <div class="col" id="CharFilter">
+      					  <a href= "AnimalesPresenter?categoria=INVISIBLE">
          					   <button type="button" class="btn btn-outline-black waves-effect filter " name ="categoria">INVISIBLE</button>
+         					   </a>
       					  </div>
 
      					   <div class="col" id="CharFilter">
+     					   <a href= "AnimalesPresenter?categoria=RESERVADO">
           					  <button type="button" class="btn btn-outline-black waves-effect filter" name ="categoria">RESERVADO</button>
+          					  </a>
       					  </div>
                         
                         
@@ -60,13 +70,13 @@
        </div>
 
 	<div class="row">
-	<c:forEach  var = "animal" items = "Animales">
+	<c:forEach  var = "animal" items = "${Animales}">
 		<div class="col-md-4">
 		
            <form action="AnimalPresenter" method="post">
             
-         	 <div class="card mb-4 box-shadow" value="{Animal.id}" name="Animal">
-            		<img class="card-img-top" src="${animal.galeria[0]}" alt="Card image cap">
+         	 <div class="card mb-4 box-shadow" value="{animal.id}" >
+            		<img class="card-img-top" src="nada" alt="Card image cap">
            		 <div class="card-body">
              		 <p class="card-text">${animal.descripcion.cuerpo}</p>
            		   </div>

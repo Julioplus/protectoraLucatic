@@ -43,7 +43,7 @@ public class ConexionDB {
 		conexion=objetoconexion.conectarMySQL();
 		sentencia=conexion.createStatement();
 		boolean resultado = sentencia.execute(query);
-		conexion.close();
+		
 		return resultado;
 		
 	}
@@ -56,7 +56,7 @@ public class ConexionDB {
 		conexion=objetoconexion.conectarMySQL();
 		sentencia=conexion.createStatement();
 		int resultado = sentencia.executeUpdate(query);
-		conexion.close();
+		
 		if(resultado!=0){
 			return true;
 		} else {
@@ -71,7 +71,7 @@ public class ConexionDB {
 		conexion = objetoconexion.conectarMySQL();
 		sentencia = conexion.createStatement();
 		resultadoquery = sentencia.executeQuery(query);
-		conexion.close();
+		
 		return resultadoquery;		
 	}
 	public String mostrargaleria(String query)throws SQLException, ClassNotFoundException{

@@ -5,6 +5,7 @@ import java.sql.Time;
 import java.util.ArrayList;
 import dao.AnimalDAO;
 import dao.IAnimalDAO;
+import dao.Prueba;
 import domain.Animal;
 import domain.Categoria;
 import domain.Descripcion;
@@ -22,6 +23,7 @@ public class AnimalService implements IAnimalService {
 					busqueda.addAll(AnimalDAO.listarAnimalesByCategoria(Categoria.valueOf(categoria)));
 					break;
 				case DISPONIBLE:
+					System.out.println("---  AnimalServidce: categroai DISPONIBLE");
 					busqueda.addAll(AnimalDAO.listarAnimalesByCategoria(Categoria.valueOf(categoria)));
 				case INVISIBLE:
 					busqueda.addAll(AnimalDAO.listarAnimalesByCategoria(Categoria.valueOf(categoria)));
@@ -38,7 +40,9 @@ public class AnimalService implements IAnimalService {
 			e.printStackTrace();
 		}
 		return busqueda;
+//		return Prueba.getColeccion();
 	}
+	
 
 	@Override //Detalle
 	public Animal listarAnimalByID(int id) {

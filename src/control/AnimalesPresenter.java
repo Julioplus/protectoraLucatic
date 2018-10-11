@@ -1,5 +1,6 @@
 package control;
 
+import dao.Prueba;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -20,60 +21,65 @@ import services.IAnimalService;
 @WebServlet("/AnimalesPresenter")
 public class AnimalesPresenter extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public AnimalesPresenter() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
-    private IAnimalService animalService = new AnimalService();
-    
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-    	
-    	
-    	ArrayList<Animal> result;
-    	
-		switch (request.getParameter("categoria")) {
-			case "DISPONIBLE":
-				result = animalService.listarAnimalesByCategoria("DISPONIBLE");
-		        request.setAttribute("Animales", result);
-				break;
-			case "RESERVADO":
-				result = animalService.listarAnimalesByCategoria("RESERVADO");
-		        request.setAttribute("Animales", result);
-				break;
-			case "INVISIBLE":
-				result = animalService.listarAnimalesByCategoria("INVISIBLE");
-		        request.setAttribute("Animales", result);
-				break;
-			case "URGENTE":
-				result = animalService.listarAnimalesByCategoria("URGENTE");
-		        request.setAttribute("Animales", result);
-				break;
-			default:
-				
-		break;
-		}
-		
-		RequestDispatcher view = request.getRequestDispatcher("cats.jsp");
-        view.forward(request, response);
-	}
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public AnimalesPresenter() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	private IAnimalService animalService = new AnimalService();
+
+	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		ArrayList<Animal> result;
+		String categoria = request.getParameter("categoria");
+		System.out.println("--- cargando listado de " + categoria);
+		// Por si acaso. Ñapa
+		if (categoria  == null){
+			categoria = "DISPONIBLE";
+		}
+
+		switch (categoria) {
+		case "DISPONIBLE":
+		case "RESERVADO":
+		case "INVISIBLE":
+		case "URGENTE":
+			System.out.println("entra");
+			result = animalService.listarAnimalesByCategoria(categoria);
+			break;
+		default:
+			//a priori esto nmo hace falta
+			System.out.println("---lo intento directamente con DISPONIBLE");
+			result = animalService.listarAnimalesByCategoria("DISPONIBLE");
+			break;
+		}
+
+		request.setAttribute("Animales", result);
+
+		RequestDispatcher view = request.getRequestDispatcher("cats.jsp");
+		view.forward(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		processRequest(request, response);
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		processRequest(request, response);
 	}

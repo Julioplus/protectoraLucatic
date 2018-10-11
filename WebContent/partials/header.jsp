@@ -18,8 +18,11 @@
                 <a class="nav-link text-uppercase text-expanded" href="about-us.jsp">Nosotros</a>
               </li>
               <li class="nav-item  px-lg-4">
-                <a class="nav-link text-uppercase text-expanded" href="cats.jsp">Gatitos</a>
+                <a class="nav-link text-uppercase text-expanded" href="AnimalesPresenter">Gatitos</a>
               </li>
+              <li class="nav-item px-lg-4">
+                  <a class="nav-link text-uppercase text-expanded" href="buscador.jsp">Buscador</a>
+                </li>
               <li class="nav-item px-lg-4">
                 <a class="nav-link text-uppercase text-expanded" href="contact-us.jsp">Contacto</a>
               </li>

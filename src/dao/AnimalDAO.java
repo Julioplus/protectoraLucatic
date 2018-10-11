@@ -13,7 +13,10 @@ public class AnimalDAO implements IAnimalDAO{
 	
 	@Override // Listado
 	public ArrayList<Animal> listarAnimalesByCategoria(Categoria actual) throws ClassNotFoundException, SQLException {
-		ArrayList<Animal> busqueda = veranimal(conector.mostrar("SELECT * FROM animales WHERE estado = '"+actual.toString()+"'"));
+		System.out.println("--- en DAOlistarAnimalesByCategoria");
+		String query = "SELECT * FROM animales WHERE estado ='"+actual.toString().toLowerCase()+"'";
+		System.out.println("---"+query);
+		ArrayList<Animal> busqueda = veranimal(conector.mostrar(query));
 		return busqueda;
 	}
 
@@ -56,9 +59,9 @@ public class AnimalDAO implements IAnimalDAO{
 			encontrado.setId(tupla.getInt("ID_ANIMAL"));
 			encontrado.setNombre(tupla.getString("NOMBRE"));
 			encontrado.setFechaEntrada(tupla.getTime("FECHA_ENTRADA"));
-			encontrado.setEstado((Categoria.valueOf(tupla.getString("ESTADO"))));
+			encontrado.setEstado((Categoria.valueOf((tupla.getString("ESTADO")).toUpperCase())));
 			encontrado.setDescripcion(new Descripcion(tupla.getString("CABECERA"),tupla.getString("CUERPO")));
-			encontrado.setGaleria(new Galeria(urlImagen(encontrado.getId())));
+			//encontrado.setFotos(new Galeria(urlImagen(encontrado.getId())));
 			resultado.add(encontrado);
 		}
 		return resultado;
