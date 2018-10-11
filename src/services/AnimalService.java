@@ -23,6 +23,7 @@ public class AnimalService implements IAnimalService {
 
 	public boolean anadirAnimal(String[] entrada) throws ClassNotFoundException, SQLException {
 		Animal nuevo = new Animal(entrada[0], new Descripcion(entrada[1], entrada[2]), Time.valueOf(entrada[3]), Categoria.valueOf(entrada[4]));
+		
 		return true;
 	}
 	public boolean editarAnimal(String[] entrada) throws ClassNotFoundException, SQLException {
