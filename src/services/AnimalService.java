@@ -1,5 +1,6 @@
 package services;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Time;
 import java.util.ArrayList;
@@ -20,6 +21,47 @@ public class AnimalService implements IAnimalService {
 	private Time fechaSalida;
 	private Categoria estado;
 	 */
+	
+	@Override // Listado
+	public ArrayList<Animal> listarAnimalesByCategoria(String categoria) {
+		ArrayList<Animal> busqueda = new ArrayList<Animal>();
+		try {
+			busqueda = AnimalDAO.listarAnimalesByCategoria(Categoria.valueOf(categoria));
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return busqueda;
+	}
+
+	@Override //Detalle
+	public ArrayList<Animal> listarAnimalByID(int id) {
+		ArrayList<Animal> busqueda = new ArrayList<Animal>();
+		try {
+			busqueda = AnimalDAO.listarAnimalByID(id);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return busqueda;
+			
+	}
+	
+	@Override // Buscador
+	public ArrayList<Animal> listarAnimalesByPalabra(String palabra) {
+		ArrayList<Animal> busqueda = new ArrayList<Animal>();
+		try {
+			busqueda = AnimalDAO.listarAnimalesByPalabra(palabra);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return busqueda;
+			
+	}
 
 	public boolean anadirAnimal(String[] entrada) throws ClassNotFoundException, SQLException {
 		Animal nuevo = new Animal(entrada[0], new Descripcion(entrada[1], entrada[2]), Time.valueOf(entrada[3]), Categoria.valueOf(entrada[4]));
