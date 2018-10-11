@@ -81,16 +81,5 @@ public class AnimalService implements IAnimalService {
 		Animal nuevo = new Animal(entrada[0], new Descripcion(entrada[1], entrada[2]), Time.valueOf(entrada[3]), Categoria.valueOf(entrada[4]));
 		return true;
 	}
-<<<<<<< HEAD
-	
-	
-	
-	
-}
-//    public List<Animal> getAnimales(String categoria) {
-//       return AnimalDAO.getAnimales(categoria);
-//    }
-=======
->>>>>>> eacdeea36590ddd4f093ee8a40756ffdc9b16079
 
 }
