@@ -22,13 +22,13 @@ import services.IAnimalService;
         urlPatterns = {"/MainPageServlet"},
         asyncSupported = false
 )
-public class MainPageServlet extends HttpServlet {
+public class AnimalPresenter extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MainPageServlet() {
+    public AnimalPresenter() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -39,14 +39,14 @@ public class MainPageServlet extends HttpServlet {
             throws ServletException, IOException {
     	
     	//PASO 01: Recoger informacion
-        String c = request.getParameter("categoria");
+        int id = Integer.parseInt(request.getParameter("Animal"));
         
         //PASO 02: Recopilar la respuesta
-        List<Animal> result = animalService.getAnimales(c);
-        request.setAttribute("styles", result);
+        Animal result =  animalService.getAnimal(id);
+        request.setAttribute("Animal", result);
         
         //PASO 03: Salir      
-        RequestDispatcher view = request.getRequestDispatcher("result.jsp");
+        RequestDispatcher view = request.getRequestDispatcher("profile_cat.jsp");
         view.forward(request, response);
         //request.getRequestDispatcher("result.jsp").forward(request, response);
         

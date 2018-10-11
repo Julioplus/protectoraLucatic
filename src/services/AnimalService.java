@@ -100,6 +100,11 @@ public class AnimalService implements IAnimalService {
 		return null;
 	}
 	
+	@Override
+	public Animal getAnimal(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 //    public List<Animal> getAnimales(String categoria) {
 //       return AnimalDAO.getAnimales(categoria);
 //    }
