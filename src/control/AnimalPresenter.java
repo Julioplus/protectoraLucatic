@@ -18,8 +18,8 @@ import services.IAnimalService;
  * Servlet implementation class AnimalPresenter
  */
 @WebServlet(
-        name = "AnimalPresenter",
-        urlPatterns = {"/AnimalPresenter"},
+        name = "MainPageServlet",
+        urlPatterns = {"/MainPageServlet"},
         asyncSupported = false
 )
 public class AnimalPresenter extends HttpServlet {
