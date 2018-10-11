@@ -17,11 +17,7 @@ import services.IAnimalService;
 /**
  * Servlet implementation class AnimalPresenter
  */
-@WebServlet(
-        name = "MainPageServlet",
-        urlPatterns = {"/MainPageServlet"},
-        asyncSupported = false
-)
+//@WebServlet("/AnimalPresenter")
 public class AnimalPresenter extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

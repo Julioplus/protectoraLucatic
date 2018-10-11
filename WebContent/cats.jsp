@@ -76,9 +76,9 @@
 				<div class="col-md-4">
 		
 		
-				 <a href="profile_cat.jsp" name ="Animal" value="${animal.id}" id="Animal" >
+		
 			
-    				 
+    				 <a href="profile_cat.jsp" name="Animal" value="${animal.id }">
            					
          					 <div class="card mb-4 box-shadow"  >
             						<img class="card-img-top" src="" alt="Card image cap">
@@ -87,7 +87,7 @@
              					 <p class="card-text">${animal.descripcion.cuerpo}</p>
            		 			  </div>
          					 </div>
-         		</a>
+        			 	</a>
        		
         		</div>
 			</c:forEach>

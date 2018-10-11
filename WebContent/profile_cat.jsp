@@ -31,34 +31,7 @@
 
         <div class="d-flex justify-content-center">
             <div class="col-md-10 p-lg-10 mx-auto my-10">
-   <!--           
-                <div class="container" id="galleryIndex">
-          
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner" >
-                 
-                   
-
-                    <c:forEach items="${Animal.fotos}" var="${Animal.foto.}">
-                         ${Animal.galeria.foto}
-                    </c:forEach>
-
-
-
-
-
-                  </div>
-                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
-              </div>
--->
+  
             </div>
            
           </div>
