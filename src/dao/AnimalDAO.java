@@ -31,6 +31,13 @@ public class AnimalDAO implements IAnimalDAO{
 		return busqueda;
 	}
 	
+	public Galeria anadirGaleria(int id) {
+		
+		Galeria nueva = new Galeria();
+		
+		return nueva;
+	}
+	
 	public boolean anadirAnimal(Animal nuevo) throws ClassNotFoundException, SQLException {
 		String query = "INSERT INTO animales (id_animal, nombre, fecha_entrada, fecha_salida, descripcion, cabecera, estado)"
 				+ "  VALUES('"+nuevo.getId()+"', '"+nuevo.getNombre()+"', '"+nuevo.getFechaEntrada()+"', null, '"
