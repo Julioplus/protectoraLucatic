@@ -17,11 +17,6 @@ public class Descripcion implements Serializable {
 	}
 	
 	//TODO Check Descripcion methods
-	
-	/*public Descripcion(String cabecera){
-		this.cabecera=cabecera;
-	}*/
-	
 	public Descripcion(String cuerpo){
 		this.cuerpo=cuerpo;
 	}
@@ -46,8 +41,5 @@ public class Descripcion implements Serializable {
 
 	public void setCuerpo(String cuerpo) {
 		this.cuerpo = cuerpo;
-	}
-	
-	
-	
+	}	
 }
