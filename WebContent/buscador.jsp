@@ -30,15 +30,7 @@
     
     
 %>
-            
-             <div class="card mb-4 box-shadow" value="{Animal.id}" name="Animal">
-                    <img class="card-img-top" src="${Animal.galeria[0]}" alt="Card image cap">
-                 <div class="card-body">
-                     <p class="card-text">${Animal.descripcion.cuerpo}</p>
-                   </div>
-             </div>
-             
-          </form>
+        
 <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -49,6 +41,7 @@
                 <div class="input-group col-md-12">
                 
                 <form action="SearchPresenter" method="post">
+                
                   <input  name="txtKeyword"  type="text" id="txtKeyword" value="<%=keyword%>" class="form-control input-lg" placeholder="Buscar" />
                                       
                         

@@ -1,6 +1,7 @@
 package control;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -38,8 +39,13 @@ public class AnimalPresenter extends HttpServlet {
             throws ServletException, IOException {
     	
     	//PASO 01: Recoger informacion
-        int id = Integer.parseInt(request.getParameter("Animal"));
-        
+	   System.out.println("Llega?");
+        int id;
+        if(request.getParameter("Animal") != null){
+			id = Integer.parseInt(request.getParameter("Animal"));
+		}else{
+			id = Integer.parseInt(request.getParameter("Animal"));
+		}
         //PASO 02: Recopilar la respuesta
         Animal result =  animalService.listarAnimalByID(id);
         request.setAttribute("Animal", result);
@@ -52,12 +58,52 @@ public class AnimalPresenter extends HttpServlet {
     }
 
 
+   
+   
+  /* String keyword = "";
+	if(request.getParameter("txtKeyword") != null){
+		keyword = request.getParameter("txtKeyword");
+	}
+	  
+   //PASO 02: Recopilar la respuesta
+   ArrayList<Animal> result =  animalService.listarAnimalesByPalabra(keyword);
+   request.setAttribute("Animales", result);
+   
+   
+   System.out.println(result);
+   
+   //PASO 03: Salir      
+   
+	RequestDispatcher view = request.getRequestDispatcher("cats.jsp");
+   view.forward(request, response);
+   */
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		processRequest(request, response);
 	}
 
 	/**
@@ -65,7 +111,7 @@ public class AnimalPresenter extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		processRequest(request, response);
 	}
 
 }

@@ -34,31 +34,31 @@
 	 <div class="container" >
 	
 	 <div class="row">
-	 <div class="d-flex justify-content-around">
-                <form action="AnimalesPresenter" value="DISPONIBLE" method="post">
+		 <div class="d-flex justify-content-around">
+                <form>
                     
                         
                          <div class="col" id="CharFilter" >
-                         <a href= "AnimalesPresenter?categoria=DISPONIBLE">
-           					 <button type="button" class="btn btn-outline-black waves-effect filter " name ="categoria">DISPONIBLE</button>
+                         <a href= "AnimalesPresenter?categoria=DISPONIBLE" >
+           					 <button type="button" class="btn btn-outline-black waves-effect filter " >DISPONIBLE</button>
            					 </a>
         				</div>
 
        					 <div class="col" id="CharFilter">
-       					 <a href= "AnimalesPresenter?categoria=URGENTE">
-          					  <button type="button" class="btn btn-outline-black waves-effect filter " name ="categoria">URGENTE</button>
+       					 <a href= "AnimalesPresenter?categoria=URGENTE" >
+          					  <button type="button" class="btn btn-outline-black waves-effect filter " name="categoria">URGENTE</button>
           					  </a>
         				</div>
 
       					  <div class="col" id="CharFilter">
-      					  <a href= "AnimalesPresenter?categoria=INVISIBLE">
-         					   <button type="button" class="btn btn-outline-black waves-effect filter " name ="categoria">INVISIBLE</button>
+      					  <a href= "AnimalesPresenter?categoria=INVISIBLE" >
+         					   <button type="button" class="btn btn-outline-black waves-effect filter " name="categoria">INVISIBLE</button>
          					   </a>
       					  </div>
 
      					   <div class="col" id="CharFilter">
-     					   <a href= "AnimalesPresenter?categoria=RESERVADO">
-          					  <button type="button" class="btn btn-outline-black waves-effect filter" name ="categoria">RESERVADO</button>
+     					   <a href= "AnimalesPresenter?categoria=RESERVADO" >
+          					  <button type="button" class="btn btn-outline-black waves-effect filter" name="categoria">RESERVADO</button>
           					  </a>
       					  </div>
                         
@@ -66,33 +66,55 @@
                        
                   
                 </form>
-       </div>
+      	 </div>
        </div>
 
 	<div class="row">
-<<<<<<< HEAD
-	<c:forEach  var = "animal" items = "${Animales}">
-=======
-	<c:forEach  var = "Animal" items = "Animales">
->>>>>>> 64d42cb2d99b0fc4689eb7aefea80443c670a812
-		<div class="col-md-4">
+
+			<c:forEach  var = "animal" items = "${Animales}">
+
+				<div class="col-md-4">
 		
-           <form action="AnimalPresenter" method="post">
-            
-         	 <div class="card mb-4 box-shadow" value="{animal.id}" >
-            		<img class="card-img-top" src="nada" alt="Card image cap">
-           		 <div class="card-body">
-             		 <p class="card-text">${animal.descripcion.cuerpo}</p>
-           		   </div>
-         	 </div>
-         	 
-       	 </form>
-       		 
-        </div>
-	</c:forEach>
+		
+				 <a href="profile_cat.jsp" name ="Animal" value="${animal.id}" id="Animal" >
+			
+    				 
+           					
+         					 <div class="card mb-4 box-shadow"  >
+            						<img class="card-img-top" src="" alt="Card image cap">
+           					 <div class="card-body">
+           					 
+             					 <p class="card-text">${animal.descripcion.cuerpo}</p>
+           		 			  </div>
+         					 </div>
+         		</a>
+       		
+        		</div>
+			</c:forEach>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 	</div>
-	 </div>
-Esta es la galeria de nuestrosssss gatitos!!!
+ </div>
+
 
 <%@include file="./partials/footer.jsp" %>
 
