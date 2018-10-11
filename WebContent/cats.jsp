@@ -28,6 +28,62 @@
 
 <%@include file="./partials/header.jsp" %>
 
+
+	 <div class="container" >
+	
+	 <div class="row">
+	 <div class="d-flex justify-content-around">
+                <form action="AnimalesPresenter" method="post">
+                    <fieldset>
+                        
+                         <div class="col" id="CharFilter" >
+           					 <button type="button" class="btn btn-outline-black waves-effect filter " name ="categoria">GATITOS</button>
+        				</div>
+
+       					 <div class="col" id="CharFilter">
+          					  <button type="button" class="btn btn-outline-black waves-effect filter " name ="categoria">URGENTES</button>
+        				</div>
+
+      					  <div class="col" id="CharFilter">
+         					   <button type="button" class="btn btn-outline-black waves-effect filter " name ="categoria">INVISIBLES</button>
+      					  </div>
+
+     					   <div class="col" id="CharFilter">
+          					  <button type="button" class="btn btn-outline-black waves-effect filter" name ="categoria">RESERVADOS</button>
+      					  </div>
+                        
+                        
+                       
+                    </fieldset>
+                </form>
+       </div>
+       </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="row">
+	<c:forEach items = "${Animales}" var = "Animal">
+		<div class="col-md-4">
+            <a href="profile_cat.jsp">
+         	 <div class="card mb-4 box-shadow">
+            	<img class="card-img-top" src="${Animal.galeria[0]}" alt="Card image cap">
+           	 <div class="card-body">
+             	 <p class="card-text">${Animal.descripcion.cuerpo}</p>
+              </div>
+         	 </div>
+       		 </a>
+        </div>
+	</c:forEach>
+	</div>
+	 </div>
 Esta es la galeria de nuestros gatitos!!!
 
 <%@include file="./partials/footer.jsp" %>

@@ -41,19 +41,19 @@ public class AnimalesPresenter extends HttpServlet {
 		switch (request.getParameter("categoria")) {
 			case "DISPONIBLE":
 				result = animalService.listarAnimalesByCategoria("DISPONIBLE");
-		        request.setAttribute("categorias", result);
+		        request.setAttribute("Animales", result);
 				break;
 			case "RESERVADO":
 				result = animalService.listarAnimalesByCategoria("RESERVADO");
-		        request.setAttribute("categorias", result);
+		        request.setAttribute("Animales", result);
 				break;
 			case "INVISIBLE":
 				result = animalService.listarAnimalesByCategoria("INVISIBLE");
-		        request.setAttribute("categorias", result);
+		        request.setAttribute("Animales", result);
 				break;
 			case "URGENTE":
 				result = animalService.listarAnimalesByCategoria("URGENTE");
-		        request.setAttribute("categorias", result);
+		        request.setAttribute("Animales", result);
 				break;
 			default:
 				
