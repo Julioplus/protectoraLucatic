@@ -70,7 +70,11 @@
        </div>
 
 	<div class="row">
+<<<<<<< HEAD
 	<c:forEach  var = "animal" items = "${Animales}">
+=======
+	<c:forEach  var = "Animal" items = "Animales">
+>>>>>>> 64d42cb2d99b0fc4689eb7aefea80443c670a812
 		<div class="col-md-4">
 		
            <form action="AnimalPresenter" method="post">
