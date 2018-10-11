@@ -33,6 +33,7 @@ public class AnimalesPresenter extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
     	
+    	
     	List<Animal> result;
     	
 		switch (request.getParameter("categoria")) {
