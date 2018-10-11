@@ -74,4 +74,17 @@ public class ConexionDB {
 		conexion.close();
 		return resultadoquery;		
 	}
+	public String mostrargaleria(String query)throws SQLException, ClassNotFoundException{
+		ConexionDB objetoconexion= new ConexionDB();
+		Statement sentencia = null;
+		Connection conexion = null;
+		ResultSet resultadoquery = null;
+		conexion=objetoconexion.conectarMySQL();
+		sentencia=conexion.createStatement();
+		resultadoquery= sentencia.executeQuery(query);
+		String resultado=resultadoquery.getString(1);
+		conexion.close();
+		return resultado;
+		
+	}
 }
