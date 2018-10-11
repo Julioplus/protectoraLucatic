@@ -13,8 +13,7 @@ public class AnimalDAO implements IAnimalDAO{
 	
 	@Override // Listado
 	public ArrayList<Animal> listarAnimalesByCategoria(Categoria actual) throws ClassNotFoundException, SQLException {
-		ArrayList<Animal> busqueda = new ArrayList<Animal>();
-		ResultSet tupla = conector.mostrar("SELECT * FROM animales WHERE estado = "+actual.toString());
+		ArrayList<Animal> busqueda = veranimal(conector.mostrar("SELECT * FROM animales WHERE estado = "+actual.toString()));
 		return busqueda;
 	}
 
@@ -52,20 +51,19 @@ public class AnimalDAO implements IAnimalDAO{
 		return conector.borrar(query);
 	}	
 	
-	public Animal veranimal(Animal nuevo)throws ClassNotFoundException, SQLException{
-		String query= "SELECT * FROM animales where ID_ANIMAL="+nuevo.getId();
-		java.sql.ResultSet resultadoquery = conector.mostrar(query);
+	private ArrayList<Animal> veranimal(ResultSet tupla)throws ClassNotFoundException, SQLException{
+
 		Animal encontrado = new Animal();
-		while(resultadoquery.next()){
-			encontrado.setId(resultadoquery.getInt("ID_ANIMAL"));
-			encontrado.setNombre(resultadoquery.getString("NOMBRE"));
-			encontrado.setFechaEntrada(resultadoquery.getTime("FECHA_ENTRADA"));
-			encontrado.setEstado((Categoria.valueOf(resultadoquery.getString("ESTADO"))));
-			Descripcion aux = new Descripcion(resultadoquery.getString("CABECERA"),resultadoquery.getString("CUERPO"));
-			encontrado.setDescripcion(aux);
-			
+		ArrayList<Animal> resultado = new ArrayList<Animal>();
+		while(tupla.next()){
+			encontrado.setId(tupla.getInt("ID_ANIMAL"));
+			encontrado.setNombre(tupla.getString("NOMBRE"));
+			encontrado.setFechaEntrada(tupla.getTime("FECHA_ENTRADA"));
+			encontrado.setEstado((Categoria.valueOf(tupla.getString("ESTADO"))));
+			encontrado.setDescripcion(new Descripcion(tupla.getString("CABECERA"),tupla.getString("CUERPO")));
+			resultado.add(encontrado);
 		}
-		return encontrado;
+		return resultado;
 		
 	}
 
