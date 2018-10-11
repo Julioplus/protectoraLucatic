@@ -73,10 +73,10 @@
 
 			<c:forEach  var = "animal" items = "${Animales}">
 
-				<div class="col-md-4">
+				<div class="col-md-4" name="Animal" value="${animal.id}" id="Animal">
 		
 		
-		 		<a href="AnimalPresenter"  name="Animal" value="${animal.id}" id="Animal">
+		 		<a href="AnimalPresenter" >
                 
 			
     		
