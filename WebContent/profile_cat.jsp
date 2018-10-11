@@ -8,7 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="AnimalPresenter" method="post">
 
 
 
@@ -24,7 +23,8 @@
 
 
 
-    <div class="container">
+
+    <div class="container" name ="Animal">
 
 
 
@@ -82,7 +82,7 @@
                               </tr>
                             <tr>
                               <th scope="row">Estado</th>
-                              <td>${Animal.estado}</td>
+                              <td>${animal.estado}</td>
                              
                             </tr>
                            
@@ -123,7 +123,7 @@
 
 
 
-</form>
+
 
 
 </body>

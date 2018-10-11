@@ -17,7 +17,7 @@ import services.IAnimalService;
 /**
  * Servlet implementation class AnimalPresenter
  */
-//@WebServlet("/AnimalPresenter")
+@WebServlet("/AnimalPresenter")
 public class AnimalPresenter extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -35,16 +35,17 @@ public class AnimalPresenter extends HttpServlet {
             throws ServletException, IOException {
     	
     	//PASO 01: Recoger informacion
-	   System.out.println("Llega?");
-        int id;
+	   	System.out.println("Llega?");
+        String value = "";
         if(request.getParameter("Animal") != null){
-			id = Integer.parseInt(request.getParameter("Animal"));
+			value = request.getParameter("Animal");
 		}else{
-			id = Integer.parseInt(request.getParameter("Animal"));
+			System.out.println("fallooooooooooo");
 		}
         //PASO 02: Recopilar la respuesta
-        Animal result =  animalService.listarAnimalByID(id);
-        request.setAttribute("Animal", result);
+        int id = Integer.parseInt(value);
+        Animal animal =  animalService.listarAnimalByID(id);
+        request.setAttribute("Animal", animal);
         
         //PASO 03: Salir      
         RequestDispatcher view = request.getRequestDispatcher("profile_cat.jsp");
