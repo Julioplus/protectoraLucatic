@@ -26,7 +26,21 @@ public class AnimalService implements IAnimalService {
 	public ArrayList<Animal> listarAnimalesByCategoria(String categoria) {
 		ArrayList<Animal> busqueda = new ArrayList<Animal>();
 		try {
-			busqueda = AnimalDAO.listarAnimalesByCategoria(Categoria.valueOf(categoria));
+			switch (Categoria.valueOf(categoria)) {
+				case RESERVADO:
+					busqueda.addAll(AnimalDAO.listarAnimalesByCategoria(Categoria.valueOf(categoria)));
+					break;
+				case DISPONIBLE:
+					busqueda.addAll(AnimalDAO.listarAnimalesByCategoria(Categoria.valueOf(categoria)));
+				case INVISIBLE:
+					busqueda.addAll(AnimalDAO.listarAnimalesByCategoria(Categoria.valueOf(categoria)));
+				case URGENTE:
+					busqueda.addAll(AnimalDAO.listarAnimalesByCategoria(Categoria.valueOf(categoria)));
+					break;
+				default:
+					busqueda.addAll(AnimalDAO.listarAnimalesByCategoria(Categoria.valueOf(categoria)));
+					break;
+			}
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
