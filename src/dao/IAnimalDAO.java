@@ -14,6 +14,8 @@ public interface IAnimalDAO {
 	public boolean anadirAnimal(Animal animal) throws ClassNotFoundException, SQLException;
 	public boolean editarAnimal(Animal animal) throws ClassNotFoundException, SQLException;
 	public boolean eliminarAnimal(Animal animal) throws ClassNotFoundException, SQLException;
-	public <e> ArrayList<Animal> listarAnimales(e o);
-	public ArrayList<Animal> listarAnimalbyID(int id);
+	public ArrayList<Animal> listarAnimalesByCategoria(Categoria actual);
+	public ArrayList<Animal> listarAnimalByID(int id);
+	public ArrayList<Animal> listarAnimalesByPalabra(String palabra);
+
 }

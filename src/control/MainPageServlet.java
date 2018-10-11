@@ -22,20 +22,20 @@ import services.IAnimalService;
         urlPatterns = {"/AnimalPresenter"},
         asyncSupported = false
 )
-public class AnimalPresenter extends HttpServlet {
+public class MainPageServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AnimalPresenter() {
+    public MainPageServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
     
 	private IAnimalService animalService = new AnimalService();
 
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+   protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
     	
     	//PASO 01: Recoger informacion
@@ -51,6 +51,7 @@ public class AnimalPresenter extends HttpServlet {
         //request.getRequestDispatcher("result.jsp").forward(request, response);
         
     }
+
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)

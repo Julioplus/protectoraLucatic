@@ -3,12 +3,10 @@ package dao;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator; //Usado no activado
+//import java.util.Iterator; //Usado no activado
 import java.util.List;
 import java.util.Map;
-import domain.*; //Usado no implimentado
-
-import domain.Animal;
+import domain.*;
 
 public class AnimalDAO implements IAnimalDAO{
 	
@@ -17,21 +15,21 @@ public class AnimalDAO implements IAnimalDAO{
 	public AnimalDAO() {};
 	
 	@Override // Listado
-	public ArrayList<Animal> listarAnimales(Categoria actual) {
+	public ArrayList<Animal> listarAnimalesByCategoria(Categoria actual) {
 		ArrayList<Animal> busqueda;
 		
 		return busqueda;
 	}
 
 	@Override //Detalle
-	public ArrayList<Animal> listarAnimalbyID(int id) {
+	public ArrayList<Animal> listarAnimalByID(int id) {
 		ArrayList<Animal> busqueda;
 		
 		return busqueda;
 	}
 	
 	@Override // Buscador
-	public ArrayList<Animal> listarAnimales(String palabra) {
+	public ArrayList<Animal> listarAnimalesByPalabra(String palabra) {
 		ArrayList<Animal> busqueda;
 		
 		return busqueda;
@@ -57,6 +55,22 @@ public class AnimalDAO implements IAnimalDAO{
 		return conector.borrar(query);
 	}	
 	
+	public Animal veranimal(Animal nuevo)throws ClassNotFoundException, SQLException{
+		String query= "SELECT * FROM animales where ID_ANIMAL="+nuevo.getId();
+		java.sql.ResultSet resultadoquery = conector.mostraranimal(query);
+		Animal encontrado = new Animal();
+		while(resultadoquery.next()){
+			encontrado.setId(resultadoquery.getInt("ID_ANIMAL"));
+			encontrado.setNombre(resultadoquery.getString("NOMBRE"));
+			encontrado.setFechaEntrada(resultadoquery.getTime("FECHA_ENTRADA"));
+			encontrado.setEstado((Categoria.valueOf(resultadoquery.getString("ESTADO"))));
+			Descripcion aux = new Descripcion(resultadoquery.getString("CABECERA"),resultadoquery.getString("CUERPO"));
+			encontrado.setDescripcion(aux);
+			
+		}
+		return encontrado;
+		
+	}
 	
 //	public List<Animal> getAnimales(String categoria){
 //		
