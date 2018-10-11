@@ -10,21 +10,21 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item px-lg-4 active">
-                <a class="nav-link text-uppercase text-expanded" href="index.html">Home
+                <a class="nav-link text-uppercase text-expanded" href="MainPage.jsp">Home
                     <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item px-lg-4">
-                <a class="nav-link text-uppercase text-expanded" href="about.html">Nosotros</a>
+                <a class="nav-link text-uppercase text-expanded" href="about-us.jsp">Nosotros</a>
               </li>
               <li class="nav-item  px-lg-4">
-                <a class="nav-link text-uppercase text-expanded" href="cats.html">Gatitos</a>
+                <a class="nav-link text-uppercase text-expanded" href="cats.jsp">Gatitos</a>
               </li>
               <li class="nav-item px-lg-4">
-                <a class="nav-link text-uppercase text-expanded" href="contact-us.html">Contacto</a>
+                <a class="nav-link text-uppercase text-expanded" href="contact-us.jsp">Contacto</a>
               </li>
               <li class="nav-item px-lg-4">
-                  <a class="nav-link text-uppercase text-expanded" href="colabora.html">Colabora</a>
+                  <a class="nav-link text-uppercase text-expanded" href="colabora.jsp">Colabora</a>
                 </li>
             </ul>
           </div>
