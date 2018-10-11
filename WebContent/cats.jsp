@@ -33,23 +33,23 @@
 	
 	 <div class="row">
 	 <div class="d-flex justify-content-around">
-                <form action="AnimalesPresenter" value="GATITOS" method="post">
+                <form action="AnimalesPresenter" value="DISPONIBLE" method="post">
                     
                         
                          <div class="col" id="CharFilter" >
-           					 <button type="button" class="btn btn-outline-black waves-effect filter " name ="categoria">DISPONIBLES</button>
+           					 <button type="button" class="btn btn-outline-black waves-effect filter " name ="categoria">DISPONIBLE</button>
         				</div>
 
        					 <div class="col" id="CharFilter">
-          					  <button type="button" class="btn btn-outline-black waves-effect filter " name ="categoria">URGENTES</button>
+          					  <button type="button" class="btn btn-outline-black waves-effect filter " name ="categoria">URGENTE</button>
         				</div>
 
       					  <div class="col" id="CharFilter">
-         					   <button type="button" class="btn btn-outline-black waves-effect filter " name ="categoria">INVISIBLES</button>
+         					   <button type="button" class="btn btn-outline-black waves-effect filter " name ="categoria">INVISIBLE</button>
       					  </div>
 
      					   <div class="col" id="CharFilter">
-          					  <button type="button" class="btn btn-outline-black waves-effect filter" name ="categoria">RESERVADOS</button>
+          					  <button type="button" class="btn btn-outline-black waves-effect filter" name ="categoria">RESERVADO</button>
       					  </div>
                         
                         
@@ -58,27 +58,17 @@
                 </form>
        </div>
        </div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	<div class="row">
-	<c:forEach items = "${Animales}" var = "Animal">
+	<c:forEach  var = "animal" items = "Animales">
 		<div class="col-md-4">
 		
            <form action="AnimalPresenter" method="post">
             
          	 <div class="card mb-4 box-shadow" value="{Animal.id}" name="Animal">
-            		<img class="card-img-top" src="${Animal.galeria[0]}" alt="Card image cap">
+            		<img class="card-img-top" src="${animal.galeria[0]}" alt="Card image cap">
            		 <div class="card-body">
-             		 <p class="card-text">${Animal.descripcion.cuerpo}</p>
+             		 <p class="card-text">${animal.descripcion.cuerpo}</p>
            		   </div>
          	 </div>
          	 
@@ -88,7 +78,7 @@
 	</c:forEach>
 	</div>
 	 </div>
-Esta es la galeria de nuestros gatitos!!!
+Esta es la galeria de nuestrosssss gatitos!!!
 
 <%@include file="./partials/footer.jsp" %>
 
