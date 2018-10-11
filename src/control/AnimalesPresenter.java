@@ -3,6 +3,7 @@ package control;
 import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -57,6 +58,9 @@ public class AnimalesPresenter extends HttpServlet {
 				
 		break;
 		}
+		
+		RequestDispatcher view = request.getRequestDispatcher("cats.jsp");
+        view.forward(request, response);
 	}
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
