@@ -60,7 +60,7 @@
        </div>
 
 	<div class="row">
-	<c:forEach  var = "animal" items = "Animales">
+	<c:forEach  var = "Animal" items = "Animales">
 		<div class="col-md-4">
 		
            <form action="AnimalPresenter" method="post">
