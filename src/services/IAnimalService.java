@@ -10,4 +10,7 @@ public interface IAnimalService {
 	
 	public ArrayList<Animal> getAnimales(String categoria);
 
+	public Animal getAnimal(int id) {
+		
+	}
 }
