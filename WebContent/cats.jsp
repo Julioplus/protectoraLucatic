@@ -26,7 +26,7 @@
   </head>
 <body>
 
-<%@include file="./partials/header.jsp" %>
+<%@ include file="./partials/header.jsp" %>
 
 
 	 <div class="container" >
@@ -37,7 +37,7 @@
                     
                         
                          <div class="col" id="CharFilter" >
-           					 <button type="button" class="btn btn-outline-black waves-effect filter " name ="categoria">GATITOS</button>
+           					 <button type="button" class="btn btn-outline-black waves-effect filter " name ="categoria">DISPONIBLES</button>
         				</div>
 
        					 <div class="col" id="CharFilter">
