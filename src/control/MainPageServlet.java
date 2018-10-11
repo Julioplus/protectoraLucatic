@@ -35,7 +35,7 @@ public class MainPageServlet extends HttpServlet {
     
 	private IAnimalService animalService = new AnimalService();
 
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+   protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
     	
     	//PASO 01: Recoger informacion
@@ -51,6 +51,7 @@ public class MainPageServlet extends HttpServlet {
         //request.getRequestDispatcher("result.jsp").forward(request, response);
         
     }
+
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
