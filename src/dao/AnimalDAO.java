@@ -1,10 +1,8 @@
 package dao;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import domain.*;
 
 public class AnimalDAO implements IAnimalDAO{
@@ -14,23 +12,23 @@ public class AnimalDAO implements IAnimalDAO{
 	public AnimalDAO() {};
 	
 	@Override // Listado
-	public ArrayList<Animal> listarAnimalesByCategoria(Categoria actual) {
+	public ArrayList<Animal> listarAnimalesByCategoria(Categoria actual) throws ClassNotFoundException, SQLException {
 		ArrayList<Animal> busqueda = new ArrayList<Animal>();
-		
+		ResultSet tupla = conector.mostrar("SELECT * FROM animales WHERE estado = "+actual.toString());
 		return busqueda;
 	}
 
 	@Override //Detalle
-	public ArrayList<Animal> listarAnimalByID(int id) {
+	public ArrayList<Animal> listarAnimalByID(int id) throws ClassNotFoundException, SQLException {
 		ArrayList<Animal> busqueda = new ArrayList<Animal>();
-		
+		ResultSet tupla = conector.mostrar("SELECT * FROM animales WHERE id_animal = "+id);
 		return busqueda;
 	}
 	
 	@Override // Buscador
-	public ArrayList<Animal> listarAnimalesByPalabra(String palabra) {
+	public ArrayList<Animal> listarAnimalesByPalabra(String palabra) throws ClassNotFoundException, SQLException {
 		ArrayList<Animal> busqueda = new ArrayList<Animal>();
-		
+		ResultSet tupla = conector.mostrar("SELECT * FROM animales WHERE estado = "+actual.toString());// Query mal hecha
 		return busqueda;
 	}
 	

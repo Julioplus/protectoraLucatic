@@ -2,6 +2,7 @@ package services;
 
 import java.sql.SQLException;
 import java.sql.Time;
+import java.util.ArrayList;
 import java.util.List;
 import dao.AnimalDAO;
 import dao.IAnimalDAO;
@@ -38,7 +39,7 @@ public class AnimalService implements IAnimalService {
 	
 	
 	@Override
-	public List<Animal> getAnimales(String categoria) {
+	public ArrayList<Animal> getAnimales(String categoria) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -15,25 +15,20 @@ public class ConexionDB {
 	private String url = "jdbc:mysql://"+hostname+":"+port+"/"+database+"?useSSL=false";
 	private String username = "Usuario";
 	private String password = "1234";	
-	Statement sentencia=null;
-	Connection conexion = null;
-	ResultSet resultadoquery=null;
 	
 	private  Connection conectarMySQL() throws SQLException, ClassNotFoundException {
-		
-		    	
-		   
-			Class.forName(driver);
-			 conexion = DriverManager.getConnection(url,username,password); 
-		    
-	
-			return conexion;
+	   
+		Class.forName(driver);
+		Connection conexion = DriverManager.getConnection(url,username,password); 
+		return conexion;
 	}
 		 
 		 
 		 
 	public boolean anadir(String query) throws SQLException, ClassNotFoundException{
 		ConexionDB objetoconexion = new ConexionDB();
+		Statement sentencia=null;
+		Connection conexion = null;
 		conexion=objetoconexion.conectarMySQL();
 		sentencia=conexion.createStatement();
 		boolean resultado = sentencia.execute(query);
@@ -43,6 +38,8 @@ public class ConexionDB {
 }
 	public boolean borrar(String query) throws SQLException, ClassNotFoundException{
 		ConexionDB objetoconexion = new ConexionDB();
+		Statement sentencia=null;
+		Connection conexion = null;
 		conexion=objetoconexion.conectarMySQL();
 		sentencia=conexion.createStatement();
 		boolean resultado = sentencia.execute(query);
@@ -54,6 +51,8 @@ public class ConexionDB {
 
 	public boolean modificar(String query) throws SQLException, ClassNotFoundException{
 		ConexionDB objetoconexion = new ConexionDB();
+		Statement sentencia=null;
+		Connection conexion = null;
 		conexion=objetoconexion.conectarMySQL();
 		sentencia=conexion.createStatement();
 		int resultado = sentencia.executeUpdate(query);
@@ -66,17 +65,13 @@ public class ConexionDB {
 	}
 	public ResultSet mostrar(String query)throws SQLException, ClassNotFoundException{
 		ConexionDB objetoconexion = new ConexionDB();
-		conexion=objetoconexion.conectarMySQL();
-		sentencia=conexion.createStatement();
+		Statement sentencia = null;
+		Connection conexion = null;
+		ResultSet resultadoquery = null;
+		conexion = objetoconexion.conectarMySQL();
+		sentencia = conexion.createStatement();
 		resultadoquery = sentencia.executeQuery(query);
 		conexion.close();
-		if(resultadoquery!=null){
-			return resultadoquery;		
-		} else {
-			return null;
-		}
-	
-		
-		
+		return resultadoquery;		
 	}
 }
