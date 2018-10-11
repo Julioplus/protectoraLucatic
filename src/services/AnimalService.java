@@ -70,16 +70,15 @@ public class AnimalService implements IAnimalService {
 
 	public boolean anadirAnimal(String[] entrada) throws ClassNotFoundException, SQLException {
 		Animal nuevo = new Animal(entrada[0], new Descripcion(entrada[1], entrada[2]), Time.valueOf(entrada[3]), Categoria.valueOf(entrada[4]));
-		
-		return true;
+		return AnimalDAO.anadirAnimal(nuevo);
 	}
 	public boolean editarAnimal(String[] entrada) throws ClassNotFoundException, SQLException {
 		Animal nuevo = new Animal(entrada[0], new Descripcion(entrada[1], entrada[2]), Time.valueOf(entrada[3]), Categoria.valueOf(entrada[4]));
-		return true;
+		return AnimalDAO.editarAnimal(nuevo);
 	}
 	public boolean eliminarAnimal(String[] entrada) throws ClassNotFoundException, SQLException {
 		Animal nuevo = new Animal(entrada[0], new Descripcion(entrada[1], entrada[2]), Time.valueOf(entrada[3]), Categoria.valueOf(entrada[4]));
-		return true;
+		return AnimalDAO.eliminarAnimal(nuevo);
 	}
 
 }

@@ -10,6 +10,7 @@ public class Animal {
 	private Time fechaEntrada;
 	private Time fechaSalida;
 	private Categoria estado;
+	private Galeria fotos;
 	
 	public Animal(){
 		
@@ -78,16 +79,19 @@ public class Animal {
 	public void setId(int id) {
 		this.id = id;
 	}
+	
+	public Galeria getGaleria() {
+		return fotos;
+	}
+	
+	public void setGaleria(Galeria galeria) {
+		this.fotos = galeria;
+	}
 
 	@Override
 	public String toString() {
 		return "Animal [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", fechaEntrada="
 				+ fechaEntrada + ", fechaSalida=" + fechaSalida + ", estado=" + estado + "]";
 	}
-	
-	
-
-	
-	
 	
 }

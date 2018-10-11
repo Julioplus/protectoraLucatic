@@ -31,7 +31,5 @@ public class Galeria {
 	public void setDireccion(String direccion) {
 		this.direcciones.add(direccion);
 	}
-
-	
 	
 }

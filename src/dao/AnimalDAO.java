@@ -20,22 +20,13 @@ public class AnimalDAO implements IAnimalDAO{
 	@Override //Detalle
 	public ArrayList<Animal> listarAnimalByID(int id) throws ClassNotFoundException, SQLException {
 		ArrayList<Animal> busqueda = veranimal(conector.mostrar("SELECT * FROM animales WHERE id_animal = "+id));
-		//ResultSet tupla = conector.mostrar("SELECT * FROM animales WHERE id_animal = "+id);
 		return busqueda;
 	}
 	
 	@Override // Buscador
 	public ArrayList<Animal> listarAnimalesByPalabra(String palabra) throws ClassNotFoundException, SQLException {
 		ArrayList<Animal> busqueda = veranimal(conector.mostrar("select * from animales where cuerpo like'%"+palabra+"%'"));
-		//ResultSet tupla = conector.mostrar("select * from animales where cuerpo like'%"+palabra+"%'");
 		return busqueda;
-	}
-	
-	public Galeria anadirGaleria(int id) {
-		
-		Galeria nueva = new Galeria();
-		
-		return nueva;
 	}
 	
 	public boolean anadirAnimal(Animal nuevo) throws ClassNotFoundException, SQLException {
@@ -67,13 +58,14 @@ public class AnimalDAO implements IAnimalDAO{
 			encontrado.setFechaEntrada(tupla.getTime("FECHA_ENTRADA"));
 			encontrado.setEstado((Categoria.valueOf(tupla.getString("ESTADO"))));
 			encontrado.setDescripcion(new Descripcion(tupla.getString("CABECERA"),tupla.getString("CUERPO")));
+			encontrado.setGaleria(new Galeria(urlImagen(encontrado.getId())));
 			resultado.add(encontrado);
 		}
-		return resultado;		
+		return resultado;
 	}	
-	public String urlimagen(int id)throws ClassNotFoundException, SQLException {
-		String query = "SELECT URL FROM galeria_animales WHERE ID_ANIMAL ="+id;
-		return conector.mostrargaleria(query);
+	
+	public String urlImagen(int id)throws ClassNotFoundException, SQLException {
+		return conector.mostrargaleria("SELECT URL FROM galeria_animales WHERE ID_ANIMAL ="+id);
 	}
 
 }
