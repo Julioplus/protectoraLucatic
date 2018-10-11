@@ -11,7 +11,5 @@ public interface IAnimalService {
 	public ArrayList<Animal> listarAnimalByID(int id);
 	public ArrayList<Animal> listarAnimalesByPalabra(String palabra);
 
-	public Animal getAnimal(int id) {
-		
-	}
+
 }

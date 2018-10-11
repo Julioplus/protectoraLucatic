@@ -44,7 +44,7 @@ public class AnimalesPresenter extends HttpServlet {
 		        request.setAttribute("categorias", result);
 				break;
 			case "RESERVADO":
-				result = animalService.listarAnimalesByCategoria"RESERVADO");
+				result = animalService.listarAnimalesByCategoria("RESERVADO");
 		        request.setAttribute("categorias", result);
 				break;
 			case "INVISIBLE":
