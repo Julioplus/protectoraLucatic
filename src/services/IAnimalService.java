@@ -14,4 +14,8 @@ public interface IAnimalService {
 	public boolean editarAnimal(String[] entrada) throws ClassNotFoundException, SQLException;
 	public boolean eliminarAnimal(String[] entrada) throws ClassNotFoundException, SQLException;
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> eacdeea36590ddd4f093ee8a40756ffdc9b16079
 }

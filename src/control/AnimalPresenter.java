@@ -42,7 +42,7 @@ public class AnimalPresenter extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("Animal"));
         
         //PASO 02: Recopilar la respuesta
-        Animal result =  animalService.getAnimal(id);
+        Animal result =  animalService.listarAnimalByID(id);
         request.setAttribute("Animal", result);
         
         //PASO 03: Salir      
