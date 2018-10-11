@@ -64,7 +64,7 @@ public class ConexionDB {
 			return false;
 		}
 	}
-	public ResultSet mostraranimal(String query)throws SQLException, ClassNotFoundException{
+	public ResultSet mostrar(String query)throws SQLException, ClassNotFoundException{
 		ConexionDB objetoconexion = new ConexionDB();
 		conexion=objetoconexion.conectarMySQL();
 		sentencia=conexion.createStatement();

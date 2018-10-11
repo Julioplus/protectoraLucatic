@@ -12,25 +12,29 @@ import domain.Animal;
 
 public class AnimalDAO implements IAnimalDAO{
 	
-	private Map<Integer, Animal> stock;
 	private ConexionDB conector = new ConexionDB();
 	
-	public AnimalDAO() {
-		stock = new HashMap<>();
-	}
+	public AnimalDAO() {};
 	
-	public Map<Integer, Animal> getStock() {
-		return stock;
-	}
-	
-	public void setStock(Map<Integer, Animal> stock){
-		this.stock = stock;
+	@Override // Listado
+	public ArrayList<Animal> listarAnimales(Categoria actual) {
+		ArrayList<Animal> busqueda;
+		
+		return busqueda;
 	}
 
-	public ArrayList<Animal> mostrarAnimales(String nombre) {
+	@Override //Detalle
+	public ArrayList<Animal> listarAnimalbyID(int id) {
+		ArrayList<Animal> busqueda;
 		
+		return busqueda;
+	}
+	
+	@Override // Buscador
+	public ArrayList<Animal> listarAnimales(String palabra) {
+		ArrayList<Animal> busqueda;
 		
-		return null;
+		return busqueda;
 	}
 	
 	public boolean anadirAnimal(Animal nuevo) throws ClassNotFoundException, SQLException {
@@ -86,10 +90,14 @@ public class AnimalDAO implements IAnimalDAO{
 		return null;
 	}
 
-	@Override // Este método hay que matarlo después
-	public boolean listarAnimales() {
+	@Override
+	public <e> ArrayList<Animal> listarAnimales(e o) {
 		// TODO Auto-generated method stub
-		return false;
+ArrayList<Animal> busqueda;
+		
+		return busqueda;
 	}
+
+
 
 }
