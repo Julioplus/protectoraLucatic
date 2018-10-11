@@ -1,6 +1,7 @@
 package control;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -35,7 +36,7 @@ public class AnimalesPresenter extends HttpServlet {
 			throws ServletException, IOException {
     	
     	
-    	List<Animal> result;
+    	ArrayList<Animal> result;
     	
 		switch (request.getParameter("categoria")) {
 			case "DISPONIBLE":
