@@ -35,7 +35,7 @@
 	
 	 <div class="row">
 		 <div class="d-flex justify-content-around">
-                <form>
+           
                     
                         
                          <div class="col" id="CharFilter" >
@@ -65,10 +65,10 @@
                         
                        
                   
-                </form>
+             
       	 </div>
        </div>
-
+	</div>
 
 
 
@@ -81,35 +81,34 @@
 
 
 
-
-
-				<div class="col-md-4" >
+<!-- <div class="col-md-4" >
 		
 		
 		 		
-                 <form action="AnimalPresenter" method="post">
+                 <a href="AnimalPresenter?Animal=${animal.id}" >
 			
     		
            					
          					 <div class="card mb-4 box-shadow"  >
          					 
          					 
-         					 <input type="image" src="img/GATO5.jpg" class="card-img-top" alt="${animal.nombre}" name="Animal" value="${animal.id}">
+         					 <img  src="img/GATO5.jpg" class="card-img-top" alt="${animal.nombre}" >
             						
            					 <div class="card-body">
            					 
              					 <p class="card-text">${animal.descripcion.cuerpo}</p>
            		 			  </div>
            		 			  
-           		 		<!-- <input type="button" name="Animal" value="${animal.id}" id="Animal">	
-           		 			  Más info de ${animal.nombre}
-           		 			  </input>-->
+           		 	
            		 			  
            
            		 			  
          					 </div>
-      			  	</form>
-        		</div>
+      			  	</a>
+        		</div> 
+        		-->
+
+				
         		
         		
         		
