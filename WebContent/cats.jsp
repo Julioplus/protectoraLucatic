@@ -69,28 +69,52 @@
       	 </div>
        </div>
 
+
+
+
 	<div class="row">
 
 			<c:forEach  var = "animal" items = "${Animales}">
 
-				<div class="col-md-4" name="Animal" value="${animal.id}" id="Animal">
+
+  
+
+
+
+
+
+				<div class="col-md-4" >
 		
 		
-		 		<a href="AnimalPresenter" >
-                
+		 		
+                 <form action="AnimalPresenter" method="post">
 			
     		
            					
          					 <div class="card mb-4 box-shadow"  >
-            						<img class="card-img-top" src="" alt="Card image cap">
+         					 
+         					 
+         					 <input type="image" src="img/GATO5.jpg" class="card-img-top" alt="${animal.nombre}" name="Animal" value="${animal.id}">
+            						
            					 <div class="card-body">
            					 
              					 <p class="card-text">${animal.descripcion.cuerpo}</p>
            		 			  </div>
+           		 			  
+           		 		<!-- <input type="button" name="Animal" value="${animal.id}" id="Animal">	
+           		 			  Más info de ${animal.nombre}
+           		 			  </input>-->
+           		 			  
+           
+           		 			  
          					 </div>
-        			
-       			</a>
+      			  	</form>
         		</div>
+        		
+        		
+        		
+        		
+        		
 			</c:forEach>
 			
 			
