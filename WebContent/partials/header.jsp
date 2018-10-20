@@ -9,7 +9,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav mx-auto">
-              <li class="nav-item px-lg-4 active">
+              <li class="nav-item px-lg-4">
                 <a class="nav-link text-uppercase text-expanded" href="MainPage.jsp">Home
                     <span class="sr-only">(current)</span>
                 </a>
@@ -30,7 +30,6 @@
                   <a class="nav-link text-uppercase text-expanded" href="colabora.jsp">Colabora</a>
                 </li>
             </ul>
-          </div>
-  
+          </div>s
         </div>
       </nav>

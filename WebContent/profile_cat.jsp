@@ -6,6 +6,16 @@
 
 
 <head>
+<<<<<<< HEAD
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+    <div class="container" name ="Animal">
+        <div class="d-flex justify-content-center">
+            <div class="col-md-10 p-lg-10 mx-auto my-10">
+  
+=======
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -68,6 +78,7 @@
                 </div>
               </div>
 
+>>>>>>> a7ceb61c87affffe62554db9788247078af0f827
             </div>
            
           </div>
