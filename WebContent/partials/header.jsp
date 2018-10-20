@@ -30,6 +30,6 @@
                   <a class="nav-link text-uppercase text-expanded" href="colabora.jsp">Colabora</a>
                 </li>
             </ul>
-          </div>s
+          </div>
         </div>
       </nav>

@@ -68,6 +68,7 @@
   
         </div>
       </nav>
+  
 
 
 <%@include file="./partials/footer.jsp" %>
