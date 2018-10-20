@@ -34,30 +34,31 @@
 	 <div class="container" >
 	
 	 <div class="row">
-		 <div class="d-flex justify-content-around">
+	 
+		 <div class="col-10 d-flex justify-content-center">
            
                     
                         
                          <div class="col" id="CharFilter" >
-                         <a href= "AnimalesPresenter?categoria=DISPONIBLE" >
+                    	     <a href= "AnimalesPresenter?categoria=DISPONIBLE" >
            					 <button type="button" class="btn btn-outline-black waves-effect filter " >DISPONIBLE</button>
            					 </a>
         				</div>
 
        					 <div class="col" id="CharFilter">
-       					 <a href= "AnimalesPresenter?categoria=URGENTE" >
+       						 <a href= "AnimalesPresenter?categoria=URGENTE" >
           					  <button type="button" class="btn btn-outline-black waves-effect filter " name="categoria">URGENTE</button>
           					  </a>
         				</div>
 
       					  <div class="col" id="CharFilter">
-      					  <a href= "AnimalesPresenter?categoria=INVISIBLE" >
+      						  <a href= "AnimalesPresenter?categoria=INVISIBLE" >
          					   <button type="button" class="btn btn-outline-black waves-effect filter " name="categoria">INVISIBLE</button>
          					   </a>
       					  </div>
 
      					   <div class="col" id="CharFilter">
-     					   <a href= "AnimalesPresenter?categoria=RESERVADO" >
+     						   <a href= "AnimalesPresenter?categoria=RESERVADO" >
           					  <button type="button" class="btn btn-outline-black waves-effect filter" name="categoria">RESERVADO</button>
           					  </a>
       					  </div>
@@ -72,7 +73,7 @@
 
 
 
-	<div class="row">
+	<div class="row" id="imageGallery">
 
 			<c:forEach  var = "animal" items = "${Animales}">
 
@@ -88,7 +89,7 @@
 			
     		
            					
-         					 <div class="card mb-4 box-shadow"  >
+         					 <div class="card mb-4 box-shadow">
          					 
          					 
          					 <img  src="img/GATO5.jpg" class="card-img-top" alt="${animal.nombre}" >
@@ -136,7 +137,7 @@
 			
 			
 	</div>
- </div>
+
 
 
 <%@include file="./partials/footer.jsp" %>
