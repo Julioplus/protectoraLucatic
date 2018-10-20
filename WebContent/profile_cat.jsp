@@ -8,27 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="container" name ="Animal">
-
-
-
-
         <div class="d-flex justify-content-center">
             <div class="col-md-10 p-lg-10 mx-auto my-10">
   
