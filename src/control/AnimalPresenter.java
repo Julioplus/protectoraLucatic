@@ -45,7 +45,9 @@ public class AnimalPresenter extends HttpServlet {
         //PASO 02: Recopilar la respuesta
         int id = Integer.parseInt(value);
         Animal animal =  animalService.listarAnimalByID(id);
-        request.setAttribute("Animal", animal);
+    
+        request.setAttribute("animal", animal);
+        
         
         //PASO 03: Salir      
         RequestDispatcher view = request.getRequestDispatcher("profile_cat.jsp");
