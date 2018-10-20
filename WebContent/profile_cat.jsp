@@ -97,7 +97,8 @@
             <div class="col">
 
 
-                <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+				<!--  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"> -->
+                <div class="bg-light">
                     <div class="my-3 py-3">
                       <h2 class="display-5">${animal.descripcion.cabecera}</h2>
                       <p class="lead">${animal.descripcion.cuerpo}</p>
