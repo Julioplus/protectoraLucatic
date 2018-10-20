@@ -22,6 +22,7 @@
     <!-- Custom styles for this template -->
     <!--<link href="css/business-casual.min.css" rel="stylesheet">-->
     <link rel="stylesheet" href="css/style.css" rel="stylesheet">
+       <link rel="stylesheet" href="css/business-casual.css" rel="stylesheet">
 
   </head>
 <body>
@@ -66,20 +67,85 @@
         </div>
       </nav>
 
+ <section class="page-section clearfix">
+      <div class="container">
+        <div class="intro">
+          <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/catimg.jpg" alt="">
+          <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+            <h2 class="section-heading mb-4">
+              <span class="section-heading-upper">Protectora de animales</span>
+              <span class="section-heading-lower">Adopta un gatito con nosotros</span>
+            </h2>
+            <p class="mb-3">Nuestros gatitos están buscando una familia con la que ser felices ¿quieres tú ser más feliz?
+            </p>
+            <div class="intro-button mx-auto">
+              <a class="btn btn-primary btn-xl" href="contact-us.jsp">Contacta con nosostros</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-Esta es la pagina principal
+    <section class="page-section cta">
+        <div class="container" id="galleryIndex">
+          
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+              <div class="carousel-caption d-none d-md-block" id="GatitosGaleria">
+                  <a href="AnimalesPresenter"><button type="button" class="btn btn-primary btn-xl">Nuestros gatitos</button></a>
+              </div>
+            </ol>
+            <div class="carousel-inner" >
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="img/GATO5.jpg" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="img/GATO5.jpg" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="img/GATO5.jpg" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                  <img class="d-block w-100" src="img/GATO5.jpg" alt="Fourth slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/GATO5.jpg" alt="Fifth slide">
+                  </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec mauris in dui pellentesque eleifend. Donec nec ex ac libero vehicula aliquet. Vestibulum sit amet mi pellentesque, venenatis enim nec, egestas est. Etiam pellentesque elit libero, at volutpat tortor malesuada et. Maecenas nisl dui, faucibus at massa ut, viverra tincidunt erat. Pellentesque quis orci eu nibh vehicula pulvinar. Morbi posuere suscipit felis eu pretium. Nullam eu hendrerit dui. Nulla vehicula, nulla vitae commodo rhoncus, justo eros vulputate sem, non sagittis ex velit eget dolor.
-
-Donec blandit eleifend auctor. Nam non mauris porta, gravida erat nec, malesuada quam. Quisque nunc magna, ullamcorper vel nulla sed, dictum tincidunt massa. Integer porta scelerisque lectus, vitae bibendum nisl tristique at. Vivamus blandit nibh sit amet consequat mattis. Morbi eget ornare lectus. Sed odio urna, fermentum a eros eu, porta sodales mi. Aenean luctus odio id leo vehicula, ut laoreet felis cursus. Pellentesque vel consectetur nulla, sit amet mattis ex. Fusce tincidunt accumsan lacus, commodo interdum turpis ullamcorper quis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed semper felis ut eros pulvinar, id volutpat purus porta. Nullam ultrices erat orci, tempor mollis risus tincidunt ut. Nam posuere semper molestie.
-
-Integer nec auctor nisl, sed lobortis augue. Etiam sit amet nunc ut lectus tempor tincidunt. Curabitur vel ante vel mi efficitur porta vel in dui. Nullam feugiat imperdiet condimentum. Pellentesque lacus sapien, rhoncus eget interdum in, pulvinar in nisi. Sed facilisis eu risus sed molestie. Cras ultrices massa libero, in porta nibh convallis nec. Suspendisse convallis, sapien a malesuada iaculis, eros odio vehicula felis, ac lobortis eros odio sed nibh. Phasellus at mauris non elit molestie tincidunt. Etiam gravida leo vitae libero aliquam eleifend. Nunc ultricies sapien et enim convallis, quis consequat nunc commodo. Nunc molestie est et turpis dignissim, lacinia condimentum eros tristique.
-
-Donec pharetra, lorem vel tincidunt vestibulum, magna nunc venenatis enim, vitae iaculis diam nunc quis diam. Duis ultricies feugiat tellus eget pulvinar. Aliquam id tincidunt odio. Aliquam maximus pretium urna eget cursus. Integer arcu lectus, iaculis at maximus at, fringilla ac eros. Etiam est risus, egestas eu mi ut, hendrerit tempor mi. Ut efficitur mollis libero ut egestas. Mauris eleifend, nibh vel sagittis euismod, ipsum ex ultrices erat, sed euismod elit ante at ipsum. Suspendisse aliquam nulla ac nulla tincidunt, non feugiat mauris varius. Fusce id elit rutrum, faucibus turpis eget, rhoncus felis.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu egestas mauris. Morbi id sapien et nibh pulvinar hendrerit. Praesent a ligula a eros ullamcorper feugiat. Nam vestibulum cursus justo in consequat. Suspendisse non arcu sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc sed arcu eget nisl sagittis congue vitae ut augue. Nullam rutrum urna id placerat tristique. Aliquam aliquet eros nunc, non lobortis est maximus at. Suspendisse malesuada orci ullamcorper orci placerat interdum. Aenean a pulvinar dolor. Vestibulum aliquet dolor tellus, eget feugiat nisi dapibus eget. Aenean malesuada imperdiet pretium. Aenean faucibus at sapien id feugiat. Sed faucibus neque dolor, a elementum tortor imperdiet nec.
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner text-center rounded">
+              <h2 class="section-heading mb-4">
+                <span class="section-heading-upper">Conocenos</span>
+                <span class="section-heading-lower">luchamos por ellos</span>
+              </h2>
+              <p class="mb-0">El abandono de animales es una cruel injusticia contra la que hay que combatir, ¡rebélate!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
 <%@include file="./partials/footer.jsp" %>
+  <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

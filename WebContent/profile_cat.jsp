@@ -53,36 +53,49 @@
         </div>
       </nav>
     <div class="container">
-        <div class="d-flex justify-content-center">
-            <div class="col-md-10 p-lg-10 mx-auto my-10">
-              
-                <div class="container" id="galleryIndex">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner" >
-                 
-                   
-
-                    <img  src="img/GATO5.jpg" class="card-img-top" alt="${animal.nombre}" >
-					
-
-
-
-
-                  </div>
-                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
+    
+    
+      <div class="container" id="galleryIndex">
+          
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          
+            <div class="carousel-inner" >
+              <div class="carousel-item active">
+               <div class="card mb-4 box-shadow">
+                <img  src="img/GATO5.jpg" class="card-img-top" alt="First slide">
                 </div>
               </div>
-
+              <div class="carousel-item">
+                  <div class="card mb-4 box-shadow">
+                <img  src="img/GATO5.jpg" class="card-img-top" alt="First slide">
+                </div>
+              </div>
+              <div class="carousel-item">
+              <div class="card mb-4 box-shadow">
+                <img  src="img/GATO5.jpg" class="card-img-top" alt="First slide">
+                </div>
+              </div>
+              <div class="carousel-item">
+          <div class="card mb-4 box-shadow">
+                <img  src="img/GATO5.jpg" class="card-img-top" alt="First slide">
+                </div>
+                </div>
+                <div class="carousel-item">
+             <div class="card mb-4 box-shadow">
+                <img  src="img/GATO5.jpg" class="card-img-top" alt="First slide">
+                </div>
+                  </div>
             </div>
-           
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
+        </div>
 
 
 

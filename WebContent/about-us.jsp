@@ -71,6 +71,50 @@
   
 
 
+
+<section class="page-section about-heading">
+      <div class="container">
+        <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/kittens.jpg" alt="">
+        <div class="about-heading-content">
+          <div class="row">
+            <div class="col-xl-9 col-lg-10 mx-auto">
+              <div class="bg-faded rounded p-5">
+                <h2 class="section-heading mb-4">
+                  <span class="section-heading-upper">Amor a los animales</span>
+                  <span class="section-heading-lower">Sobre nosotros</span>
+                </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit aspernatur ratione ipsum voluptatum tempore totam, nostrum esse nulla accusantium quam aliquam aliquid suscipit dolore? Unde quidem eum sint nostrum aut.</p>
+                <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, error. Sit iusto praesentium omnis, quasi quas nulla accusamus vitae quos ullam similique? Hic alias quaerat nesciunt veritatis sunt neque odit!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <%@include file="./partials/footer.jsp" %>
 
 </body>
