@@ -30,7 +30,7 @@
 <body>
 
 <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <span class="site-heading-upper text-primary mb-3">Sobre Nosotros</span>
+      <span class="site-heading-upper text-primary mb-3">Contacta con nosotros</span>
       <span class="site-heading-lower">Mad Lion´s</span>
 </h1>
 

@@ -18,8 +18,9 @@
 	 <!-- Bootstrap CSS -->
        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
        <!-- Custom styles for this template -->
-    <!--<link href="css/business-casual.min.css" rel="stylesheet">-->
+    <link href="css/business-casual.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" rel="stylesheet">
+
   </head>
 
 
@@ -54,6 +55,8 @@
       </nav>
     <div class="container">
     
+        <div class="d-flex justify-content-center">
+            <div class="col-md-10 p-lg-10 mx-auto my-10">
     
       <div class="container" id="galleryIndex">
           
@@ -96,6 +99,8 @@
             </a>
           </div>
         </div>
+ 		 </div>
+        </div>
 
 
 
@@ -110,8 +115,7 @@
             <div class="col">
 
 
-				<!--  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"> -->
-                <div class="bg-light">
+                <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
                     <div class="my-3 py-3">
                       <h2 class="display-5">${animal.descripcion.cabecera}</h2>
                       <p class="lead">${animal.descripcion.cuerpo}</p>
@@ -168,7 +172,7 @@
 
 
 
-  </div>
+   </div>
 
 
 
@@ -188,6 +192,8 @@
 
 <%@include file="./partials/footer.jsp" %>
 
+ <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
  

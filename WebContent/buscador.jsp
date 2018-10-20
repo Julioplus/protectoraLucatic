@@ -21,10 +21,12 @@
   </head>
 <body>
 
+
 <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <span class="site-heading-upper text-primary mb-3">Aquí puedes buscar a tu favorito</span>
+      <span class="site-heading-upper text-primary mb-3">Aqui puedes buscar tu gatito</span>
       <span class="site-heading-lower">Mad Lion´s</span>
 </h1>
+
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
         <div class="container">
           <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Mad Lions</a>
