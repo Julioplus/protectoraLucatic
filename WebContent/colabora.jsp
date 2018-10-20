@@ -69,7 +69,6 @@
         </div>
       </nav>
 
-Pagina de colaboracion
 
 <%@include file="./partials/footer.jsp" %>
 
