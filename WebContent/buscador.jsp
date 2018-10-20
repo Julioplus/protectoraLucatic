@@ -21,7 +21,7 @@
   </head>
 <body>
 <%@include file="./partials/header.jsp" %>
-</body>
+
 <%
     String keyword = "";
     if(request.getParameter("txtKeyword") != null){
